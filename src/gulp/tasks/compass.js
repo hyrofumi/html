@@ -1,16 +1,16 @@
-var config = require("../config.js");
 var gulp = require("gulp");
 
-var $ = require('gulp-load-plugins')();
-
 gulp.task("compass", function(){
+  var _ = require("../config.js");
+  var $ = require('gulp-load-plugins')();
+
   gulp
-    .src( config.src.sass + "**/*.sass" )
+    .src( _.compass.src )
     .pipe( $.plumber() )
     .pipe( $.compass({
-      confile_file: "config.rb",
-      comments: false,
-      css: config.public.style,
-      sass: "sass"
+      confile_file: _.compass.confile_file,
+      comments: _.compass.comments,
+      css: _.compass.css,
+      sass: _.compass.sass,
     }) );
 });
