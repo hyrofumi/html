@@ -1,0 +1,28 @@
+mixin include_slideshow( length )
+  ul.slideshow
+    - for( var i=0; i<length; i++ ) {
+      li
+        if i < 10
+          span Image 0#{i+1}
+        else
+          span Image #{i+1}
+    - }
+
+mixin include_movie( arg )
+  if arg.length != 0
+    article#movie
+      ul.block_movie
+        - for( var i=0; i<arg.length; i++ ) {
+          li
+            mixin include_youtube( arg[i].width, arg[i].height, arg[i].id )
+        - }
+        
+
+mixin include_youtube( width, height, src )
+  iframe(
+    width="#{width}",
+    height="#{height}",
+    src="https://www.youtube.com/embed/#{src}?rel=0"
+    frameborder="0",
+    allowfullscreen
+  )

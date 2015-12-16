@@ -12,6 +12,8 @@
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-compass": "^2.1.0",
+    "gulp-data": "^1.2.1",
+    "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.1.0",

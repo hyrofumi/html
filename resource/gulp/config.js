@@ -7,7 +7,8 @@ var path = {
 	},
 	"src": {
 		"sass": "styles/",
-		"scripts": "./scripts/_src/"
+		"scripts": "./scripts/_src/",
+		"jade": "./html/"
 	}
 };
 
@@ -21,5 +22,15 @@ module.exports = {
 		"comments": false,
 		"css": path.public.style,
 		"sass": path.src.sass
+	},
+	"jade": {
+		"src": [
+			path.src.jade + "*.jade",
+			path.src.jade + "**/*.jade",
+			path.src.jade + "**/**/*.jade",
+			"!" + path.src.jade + "_*.jade",
+			"!" + path.src.jade + "**/_*.jade"
+		],
+		"dest": path.public.http,
 	}
 }

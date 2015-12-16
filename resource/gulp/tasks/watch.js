@@ -5,4 +5,5 @@ gulp.task( "watch", function(){
   var $ = require('gulp-load-plugins')();
 
   gulp.watch(_.compass.src, ["compass"]);
+  gulp.watch(_.jade.src, ["jade"]);
 } );

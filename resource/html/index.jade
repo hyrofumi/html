@@ -1,0 +1,21 @@
+include ./_mixin/_index
+
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=980')
+    title #{meta.title}
+  body
+    div#container
+      mixin include_slideshow(4)
+      div#wrapper
+        mixin include_movie( movie )
+        
+        article#making
+          h3 Making
+          ul.block_making
+            li
+              p.title youtube
+              p.movie
+                mixin include_youtube(460, 259, "SPcZmDTW8KU") 
