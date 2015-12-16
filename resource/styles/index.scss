@@ -1,0 +1,8 @@
+@import "compass/reset";
+
+h1 {
+  color: red;
+  &:hover {
+    color: blue;
+  }
+}
