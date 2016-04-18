@@ -1,0 +1,17 @@
+mixin og_include_title( title )
+  meta(property="og:title" content="#{title}")
+
+mixin og_include_image( image_url )
+  meta(property="og:image" content="#{image_url}")
+
+mixin og_include_type( type="website" )
+  meta(property="og:type" content="#{type}")
+
+mixin og_include_url( url )
+  meta(property="og:url" content="#{url}")
+
+mixin of_include_sitename( site_name )
+  meta(property="og:site_name" content="#{site_name}")
+
+mixin og_include_description( description )
+  meta(property="og:description" content="#{description}")
