@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/*------------------------------------------------------------------------------------
+ mixin
+------------------------------------------------------------------------------------*/
+@mixin font-size($size) {
+  font-size: #{$size}px; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+// for response
+@function response-size($size, $base_size) {
+  @return percentage($size/$base_size);
+}
+
+/*
+ easing
+------------------------------------------*/
+@mixin ease-out-quint($ms) {
+	-webkit-transition: all $ms + ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	-moz-transition: all $ms +  ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	-ms-transition: all $ms +  ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	-o-transition: all $ms +  ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+	transition: all $ms + ms cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
+}
+
+@mixin ease-out-back($ms) {
+	-webkit-transition: all $ms + ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+	-webkit-transition: all $ms + ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	-moz-transition: all $ms + ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	-ms-transition: all $ms + ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	-o-transition: all $ms + ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	transition: all $ms + ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+@mixin ease-out-expo($ms) {
+	-webkit-transition: all $ms + ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	-moz-transition: all $ms + ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	-ms-transition: all $ms + ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	-o-transition: all $ms + ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	transition: all $ms + ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+
+	-webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	-moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	-ms-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	-o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+	transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+}
+
+/*
+ css
+------------------------------------------*/
+@mixin block-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
