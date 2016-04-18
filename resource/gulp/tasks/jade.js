@@ -8,13 +8,13 @@ gulp.task("jade", function(){
   gulp
     .src( _.jade.src )
     .pipe( $.plumber() )
-    .pipe( $.data(function(file){
-      var __filedir = path.dirname( file.path );
-      var __filepath = __filedir + "/" + path.basename(file.path) + '.json';
-      var __json = require( __filepath );
-      delete(require.cache[__filepath]); //キャッシュを削除する
-      return __json;
-    }))
+    // .pipe( $.data(function(file){
+    //   var __filedir = path.dirname( file.path );
+    //   var __filepath = __filedir + "/" + path.basename(file.path) + '.json';
+    //   var __json = require( __filepath );
+    //   delete(require.cache[__filepath]); //キャッシュを削除する
+    //   return __json;
+    // }))
     .pipe( $.jade({
       pretty: true
     }) )
