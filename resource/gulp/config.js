@@ -32,5 +32,8 @@ module.exports = {
 			"!" + path.src.jade + "**/_*.jade"
 		],
 		"dest": path.public.http,
+	},
+	"browserSync": {
+		"http": path.public.http
 	}
 }
