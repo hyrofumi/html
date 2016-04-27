@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "config";
+
 /*------------------------------------------------------------------------------------
  mixin
 ------------------------------------------------------------------------------------*/
@@ -11,6 +13,18 @@
 // for response
 @function response-size($size, $base_size) {
   @return percentage($size/$base_size);
+}
+
+@function calculateRem($size) {
+  $remSize: $size / $base-fontsize;
+  @return #{$remSize}rem;
+}
+
+//
+// @return %
+//
+@function bodyFontSize($n) {
+  @return percentage($n/$base-fontsize);
 }
 
 /*
