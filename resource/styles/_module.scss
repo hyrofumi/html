@@ -1,13 +1,18 @@
 @charset "UTF-8";
-
+@import "compass/";
 @import "config";
 
 /*------------------------------------------------------------------------------------
  mixin
 ------------------------------------------------------------------------------------*/
-@mixin font-size($size) {
+@mixin fontSize($size) {
   font-size: #{$size}px; //Fallback in px
   font-size: calculateRem($size);
+}
+
+@mixin fontStyle($size, $color) {
+  @include fontSize($size);
+  color: $color;
 }
 
 // for response
@@ -25,6 +30,10 @@
 //
 @function bodyFontSize($n) {
   @return percentage($n/$base-fontsize);
+}
+
+@function px( $num ) {
+  @return $num + px;
 }
 
 /*

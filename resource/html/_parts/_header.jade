@@ -1,0 +1,24 @@
+header
+  div#header-container
+    h1
+      span#header-logo-project
+        img(src="./assets/images/shared/mainview-project-title.svg", title="FUTURE FACTORY")
+      span#header-logo-name
+        include _header-logo-name-svg
+      
+    div#header-navi
+      ul#header-share.share-content
+        li.facebook
+          a(href="http://www.facebook.com/share.php?u=http%3a%2f%2ffuturefactory%2egoodsmile15th%2ejp%2f" onclick="window.open(this.href,'FBwindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;")
+            i.icon-facebook
+        li.twitter
+          a(href="https://twitter.com/intent/tweet?url=http%3a%2f%2ffuturefactory%2egoodsmile15th%2ejp%2f&text=15%e5%91%a8%e5%b9%b4%e3%82%92%e8%bf%8e%e3%81%88%e3%81%9f%e3%82%b0%e3%83%83%e3%83%89%e3%82%b9%e3%83%9e%e3%82%a4%e3%83%ab%e3%82%ab%e3%83%b3%e3%83%91%e3%83%8b%e3%83%bc%e3%81%ae%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%b5%e3%82%a4%e3%83%88%e3%80%82%e9%b3%a5%e5%8f%96%e7%9c%8c%e5%80%89%e5%90%89%e5%b8%82%e3%81%ae%e6%a5%bd%e6%9c%88%e5%b7%a5%e5%a0%b4%e3%81%ab%e6%8e%a1%e7%94%a8%e3%81%97%e3%81%9f%e3%83%ad%e3%83%9c%e3%83%83%e3%83%88%e5%b7%a5%e5%a0%b4%e9%95%b7%e3%81%ae%e6%83%85%e5%a0%b1%e3%82%84%e7%89%b9%e5%88%a5%e3%82%a4%e3%83%b3%e3%82%bf%e3%83%93%e3%83%a5%e3%83%bc%e3%82%92%e6%9b%b4%e6%96%b0%e3%81%97%e3%81%a6%e3%81%84%e3%81%8d%e3%81%be%e3%81%99%e3%80%82" onclick="window.open(this.href,'TWwindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;")
+            i.icon-twitter
+      //- ul#header-lang.lang
+      //-   li.jp.active
+      //-     a(href="#jp") JP
+      //-   li.en
+      //-     a(href="#en") EN
+      p#header-15logo.15logo
+        a(href="http://goodsmile15th.jp" target="_blank")
+          img(src="./assets/images/shared/header-15thlogo.png")

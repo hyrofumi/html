@@ -1,0 +1,24 @@
+mixin release_card( head, title, image_url, url )
+  li.release-card
+    a(href="#{url}")
+      p.image
+        img(src="#{image_url}")
+      p.head #{head}
+      p.title #{title}
+
+mixin comingsoon_card(num, date, title, text)
+  li.comingsoon-card
+    div.card-title
+      div.card-title-inner
+        p.date
+          | #{date}
+        p.title
+          | グッスマ
+          br
+          | ×
+          br
+          | #{title}
+    div.card-caption
+      div.card-caption-inner
+        p.caption #{num}
+        p.text!=  text

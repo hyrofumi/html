@@ -1,0 +1,10 @@
+mixin release_card( head, title, image_url ){
+  li.release-card
+    a(href="#")
+      p.head
+        #{head}
+      p.title
+        #{title}
+      p.image
+        img(href="#{image_url}")
+}
